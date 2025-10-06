@@ -1,12 +1,11 @@
 Flask
 Flask-SocketIO
 eventlet
+psutil
+pillow
 requests
 werkzeug
 itsdangerous
 jinja2
 python-dotenv
 pytz
-psutil
-pillow
-
