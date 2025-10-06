@@ -1,0 +1,40 @@
+[
+  {
+    "id": "general",
+    "name": "общий",
+    "type": "text",
+    "server_id": "main",
+    "category_id": "",
+    "position": 0,
+    "topic": "",
+    "created_at": 1759775886.2347605,
+    "permissions": {},
+    "settings": {
+      "nsfw": false,
+      "slowmode": 0,
+      "auto_archive": false
+    },
+    "statistics": {
+      "message_count": 0
+    }
+  },
+  {
+    "id": "voice_general",
+    "name": "Общий голосовой",
+    "type": "voice",
+    "server_id": "main",
+    "category_id": "",
+    "position": 0,
+    "topic": "",
+    "created_at": 1759775886.2347612,
+    "permissions": {},
+    "settings": {
+      "nsfw": false,
+      "slowmode": 0,
+      "auto_archive": false
+    },
+    "statistics": {
+      "message_count": 0
+    }
+  }
+]

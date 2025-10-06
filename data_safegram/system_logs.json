@@ -1,0 +1,37 @@
+[
+  {
+    "id": "log7588631040d0824eff83",
+    "timestamp": 1759775886.310832,
+    "type": "system_start",
+    "user_id": "system",
+    "description": "SafeGram 5.0 Ultimate Pro+ started successfully",
+    "data": {
+      "version": "4.0.0",
+      "port": 8080,
+      "debug": false,
+      "system_info": {
+        "platform": "Windows",
+        "platform_release": "10",
+        "platform_version": "10.0.19045",
+        "architecture": "AMD64",
+        "hostname": "DESKTOP-GC4KML3",
+        "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+        "python_version": "3.13.3",
+        "cpu_count": 20,
+        "memory_total": 31.775081634521484,
+        "disk_total": 488.64755630493164
+      },
+      "startup_time": "2025-10-06T21:38:06.310698"
+    },
+    "ip": "localhost"
+  },
+  {
+    "id": "log75971738368e89e2077f",
+    "timestamp": 1759775971.7384074,
+    "type": "session_created",
+    "user_id": "admin",
+    "description": "Создана сессия для пользователя: admin",
+    "data": {},
+    "ip": "127.0.0.1"
+  }
+]

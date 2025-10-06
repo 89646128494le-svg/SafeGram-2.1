@@ -1,0 +1,63 @@
+[
+  {
+    "id": "system",
+    "username": "System",
+    "email": "system@safegram.local",
+    "password_hash": "",
+    "avatar": "🤖",
+    "status": "online",
+    "custom_status": "",
+    "created_at": 1759775886.2347589,
+    "last_seen": 0,
+    "language": "ru",
+    "theme": "dark",
+    "level": 99,
+    "experience": 0,
+    "achievements": [],
+    "friends": [],
+    "blocked_users": [],
+    "servers": [],
+    "settings": {
+      "show_online_status": true,
+      "allow_friend_requests": true,
+      "allow_server_invites": true,
+      "notifications": true,
+      "sound_notifications": true,
+      "email_notifications": false
+    },
+    "statistics": {
+      "messages_sent": 0,
+      "files_shared": 0,
+      "voice_time": 0,
+      "servers_joined": 0
+    }
+  },
+  {
+    "id": "admin",
+    "username": "Administrator",
+    "email": "admin@safegram.local",
+    "password_hash": "f2368e56700ce9f38f8a77a7197c9f91$626Lr5SruU/PWJ/U2GIp7w0bQ9jVu8s9zyFXT0fbZE4=",
+    "avatar": "👑",
+    "status": "online",
+    "created_at": 1759775886.308014,
+    "last_seen": 1759775886.3080142,
+    "is_admin": true,
+    "level": 999,
+    "experience": 999999,
+    "achievements": [
+      "system_creator"
+    ],
+    "settings": {
+      "show_online_status": true,
+      "allow_friend_requests": false,
+      "notifications": true
+    },
+    "permissions": {
+      "manage_users": true,
+      "manage_servers": true,
+      "manage_bots": true,
+      "view_analytics": true,
+      "system_admin": true
+    }
+  }
+]

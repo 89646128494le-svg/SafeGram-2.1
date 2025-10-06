@@ -1,0 +1,14 @@
+[
+  {
+    "id": "welcome_bot",
+    "name": "Welcome Bot",
+    "description": "Приветствует новых пользователей",
+    "avatar": "👋",
+    "status": "online",
+    "commands": [
+      "/welcome",
+      "/help"
+    ],
+    "created_at": 1759775886.2347627
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "main",
+    "name": "SafeGram Community",
+    "description": "Главный сервер SafeGram",
+    "icon": "🏠",
+    "owner_id": "system",
+    "created_at": 1759775886.2347617,
+    "members": [
+      "system"
+    ],
+    "channels": [
+      "general",
+      "voice_general"
+    ],
+    "roles": [],
+    "settings": {
+      "public": false,
+      "invite_only": true,
+      "member_verification": false,
+      "explicit_content_filter": true,
+      "default_notifications": true
+    },
+    "statistics": {
+      "member_count": 0,
+      "message_count": 0,
+      "channel_count": 0
+    }
+  },
+  {
+    "id": "server_main",
+    "name": "🏠 SafeGram Community",
+    "description": "Главный сервер SafeGram",
+    "owner_id": "system",
+    "created_at": 1759775886.2470374,
+    "members": [
+      "system"
+    ],
+    "public": true
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "app_name": "SafeGram 4.0 Ultimate Pro",
+  "version": "4.0.0",
+  "registration_enabled": true,
+  "email_verification": false,
+  "max_file_size_mb": 100,
+  "default_language": "ru",
+  "default_theme": "dark",
+  "maintenance_mode": false,
+  "debug_mode": false,
+  "features": {
+    "voice_channels": true,
+    "file_sharing": true,
+    "bots": true,
+    "games": true,
+    "marketplace": true,
+    "achievements": true,
+    "custom_themes": true
+  }
+}
