@@ -7730,22 +7730,19 @@ def open_browser_delayed():
     browser_thread = threading.Thread(target=browser_opener, daemon=True)
     browser_thread.start()
 
-# ========================================================================
-# ГЛАВНАЯ ФУНКЦИЯ ЗАПУСКА
-# ========================================================================
+import os
 
-# Инициализация и запуск
 if __name__ == '__main__':
     # Очищаем экран для красивого вывода
     os.system('cls' if os.name == 'nt' else 'clear')
-    
+
     print("=" * 90)
     print("🚀 ЗАПУСК SafeGram 5.0 Ultimate Pro+ Edition")
     print("=" * 90)
     print()
     print("🌟 ОГРОМНЫЙ МЕССЕНДЖЕР - КОНКУРЕНТ DISCORD, TELEGRAM И WHATSAPP!")
     print()
-    
+
     # Системная информация
     system_info = get_system_info()
     print("💻 СИСТЕМНАЯ ИНФОРМАЦИЯ:")
@@ -7755,48 +7752,44 @@ if __name__ == '__main__':
     print(f"   💾 ОЗУ: {system_info.get('memory_total', 0):.1f} GB")
     print(f"   💿 Диск: {system_info.get('disk_total', 0):.1f} GB")
     print()
-    
+
     print("📊 СТАТИСТИКА ПРОЕКТА:")
     file_size = os.path.getsize(__file__)
     print(f"   📝 Размер файла: {file_size:,} байт ({file_size / 1024 / 1024:.2f} MB)")
-    
-    # Подсчитываем строки кода более точно
+
     try:
         with open(__file__, 'r', encoding='utf-8') as f:
             lines = f.readlines()
             code_lines = sum(1 for line in lines if line.strip() and not line.strip().startswith('#'))
             total_lines = len(lines)
             comment_lines = sum(1 for line in lines if line.strip().startswith('#'))
-            
+
         print(f"   📈 Всего строк: {total_lines:,}")
         print(f"   💻 Строк кода: {code_lines:,}")
         print(f"   📝 Комментариев: {comment_lines:,}")
-    except:
+    except Exception:
         print(f"   📈 Строк кода: ~{file_size // 45:,} (приблизительно)")
-    
+
     print(f"   🔧 Функций: 200+")
     print(f"   🌐 API endpoints: 50+")
     print(f"   📱 Веб-страниц: 10+")
     print(f"   🤖 Системных ботов: 5+")
     print()
-    
+
     print("🔗 ДОСТУПНЫЕ АДРЕСА:")
-    print(f"   🏠 Главная страница:     http://localhost:{APP_PORT}/")
-    print(f"   📱 Мессенджер:           http://localhost:{APP_PORT}/app")
-    print(f"   🔑 Вход:                 http://localhost:{APP_PORT}/login")
-    print(f"   ✨ Регистрация:          http://localhost:{APP_PORT}/register")
-    print(f"   ⚙️ МЕГА Админка:         http://localhost:{APP_PORT}/admin")
-    print(f"   📁 Файлы:                http://localhost:{APP_PORT}/files")
-    print(f"   🤖 Боты:                 http://localhost:{APP_PORT}/bots")
-    print(f"   🎨 Темы:                 http://localhost:{APP_PORT}/themes")
+    # Railway/PaaS адрес будет выдан системой, а не localhost!
+    print("   🏠 Главная страница:     (адрес Railway — см. в панели деплоя)")
+    print("   📱 Мессенджер:           .../app")
+    print("   🔑 Вход:                 .../login")
+    print("   ✨ Регистрация:           .../register")
     print()
-    
+
     print("🎯 DEMO ДОСТУПЫ:")
-    print("   👑 Администратор: admin@safegram.local / panel")
+    print("   👑 Администратор: [admin@safegram.local](mailto:admin@safegram.local) / panel")
     print("   👤 Пользователь: Создайте новый аккаунт через регистрацию")
     print("   🤖 Боты: /help, /weather, /translate, /time")
     print()
-    
+
     print("✨ ОСНОВНЫЕ ВОЗМОЖНОСТИ:")
     print("   🏠 Серверы и каналы как в Discord")
     print("   💬 Текстовые и голосовые каналы") 
@@ -7814,7 +7807,7 @@ if __name__ == '__main__':
     print("   🎪 Маркетплейс расширений")
     print("   ⚡ И множество других функций!")
     print()
-    
+
     print("🚀 НОВЫЕ ВОЗМОЖНОСТИ 5.0:")
     print("   📱 Система друзей и контактов")
     print("   🔊 Голосовые каналы и звонки")
@@ -7827,122 +7820,80 @@ if __name__ == '__main__':
     print("   💾 Автоматическое резервирование")
     print("   🔍 Мониторинг системы")
     print()
-    
     print("=" * 90)
     print()
-    
-    # Выполняем стартовые проверки
+
+    # Стартовые проверки
     if not perform_startup_checks():
         print("❌ Стартовые проверки не пройдены. Завершение работы.")
         exit(1)
-    
+
     print()
     print("🔄 ИНИЦИАЛИЗАЦИЯ СИСТЕМЫ:")
-    
-    # Создаем директории и базовые данные
     create_directories()
     create_default_admin()
-    
     print()
     print("🔧 ЗАПУСК ФОНОВЫХ ПРОЦЕССОВ:")
-    
-    # Запускаем фоновые задачи
     cleanup_sessions_periodically()
     update_user_activity_periodically()
     backup_data_periodically()
     monitor_system_health()
     process_scheduled_notifications()
     update_bot_activities()
-    
     print()
+
     print("📊 СТАТИСТИКА НА СТАРТЕ:")
-    
-    # Выводим статистику
     try:
         users = load_json(USERS_JSON, [])
         messages = load_json(MESSAGES_JSON, [])
         servers = load_json(SERVERS_JSON, [])
         bots = load_json(BOTS_JSON, [])
-        
         print(f"   👥 Пользователей: {len(users)}")
         print(f"   💬 Сообщений: {len(messages)}")
         print(f"   🏠 Серверов: {len(servers)}")
         print(f"   🤖 Ботов: {len(bots)}")
-    except:
+    except Exception:
         print("   📊 Статистика будет доступна после инициализации")
-    
-    print()
-    print("=" * 90)
-    print()
 
-    # Логируем запуск системы
-    try:
-        log_event("system_start", "SafeGram 5.0 Ultimate Pro+ started successfully", "system", {
-            "version": APP_VERSION,
-            "port": APP_PORT,
-            "debug": DEBUG_MODE,
-            "system_info": system_info,
-            "startup_time": datetime.now().isoformat()
-        })
-    except:
-        print("⚠️ Не удалось записать лог запуска")
+    print("\n" + "=" * 90 + "\n")
 
-    # Автооткрытие браузера (опционально)
-    if not DEBUG_MODE:  # Только в production режиме
-        open_browser_delayed()
+    # Открытие браузера (не обязательно для Railway)
+    # if not DEBUG_MODE:
+    #     open_browser_delayed()
+
+    # Railway/PaaS порт — используйте именно его!
+    port = int(os.environ.get("PORT", 8080))
 
     try:
-        print(f"🌟 Запуск Flask сервера на порту {APP_PORT}...")
-        print("💡 Нажмите Ctrl+C для остановки сервера")
-        print()
-        
-        # Запускаем Flask приложение
+        print(f"🌟 Запуск Flask сервера на порту {port}...")
+        print("💡 Нажмите Ctrl+C для остановки сервера\n")
+
+        # Для Flask-SocketIO:
+        # socketio.run(app, host='0.0.0.0', port=port)
+        # Для обычного Flask:
         app.run(
             host='0.0.0.0',
-            port=APP_PORT,
-            debug=DEBUG_MODE,
+            port=port,
+            debug=False,
             threaded=True,
-            use_reloader=False  # Отключаем автоперезагрузку в production
+            use_reloader=False
         )
-        
+
     except KeyboardInterrupt:
-        print("\n" + "=" * 50)
-        print("🛑 SafeGram 5.0 остановлен пользователем")
-        print("=" * 50)
-        
-        try:
-            log_event("system_stop", "SafeGram 5.0 stopped by user", "system", {
-                "stop_time": datetime.now().isoformat()
-            })
-        except:
-            pass
-            
+        print('\n' + '='*50)
+        print("🛑 SafeGram остановлен пользователем")
+        print('='*50)
     except OSError as e:
-        if "Address already in use" in str(e):
-            print(f"\n❌ Порт {APP_PORT} уже используется другим приложением")
-            print(f"   Попробуйте изменить APP_PORT в настройках или завершите процесс на порту {APP_PORT}")
+        if 'Address already in use' in str(e):
+            print(f"\n❌ Порт {port} уже используется другим приложением")
         else:
             print(f"\n❌ Ошибка запуска сервера: {e}")
-        
-        try:
-            log_error(f"Server startup error: {e}")
-        except:
-            pass
-            
     except Exception as e:
         print(f"\n❌ Критическая ошибка: {e}")
-        
-        try:
-            log_error(f"Critical error: {e}")
-        except:
-            pass
-            
     finally:
-        print("\n" + "=" * 70)
+        print('\n' + '='*70)
         print("👋 Спасибо за использование SafeGram 5.0 Ultimate Pro+!")
         print("   🤖 Создано с ❤️ и помощью продвинутого ИИ")
         print("   🌟 Ваш идеальный мессенджер - всегда с вами!")
         print("   📧 Обратная связь: safegram@example.com")
         print("=" * 70)
-
-print("✅ Добавлена расширенная система запуска SafeGram 5.0 Ultimate Pro+")
