@@ -1,5 +1,10 @@
 Flask==2.3.2
 Flask-SocketIO==5.3.3
 eventlet==0.33.3
-qrcode[pil]==7.4.2
-
+psutil==5.9.8
+requests
+werkzeug
+itsdangerous
+jinja2
+python-dotenv
+pytz
